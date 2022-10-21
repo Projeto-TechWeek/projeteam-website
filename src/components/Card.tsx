@@ -51,7 +51,7 @@ export interface CardContentProps {
 function CardContent({ children, className }: CardContentProps) {
   return (
     <>
-      <div className={clsx("flex flex-col h-2/3 justify-around", className)}>
+      <div className={clsx("flex flex-col justify-around", className)}>
         {children}
       </div>
     </>
