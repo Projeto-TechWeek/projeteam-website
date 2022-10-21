@@ -3,6 +3,7 @@ import { Input } from "../components/Input";
 import { Envelope, Key } from "phosphor-react";
 import { useState } from "react";
 import { Button } from "../components/Button";
+import { Heading } from "../components/Heading";
 
 export function Login() {
   const [wantToLogIn, setWantToLogIn] = useState(true);
@@ -13,8 +14,10 @@ export function Login() {
   return (
     <>
       <div className="w-screen h-screen bg-Primary flex justify-center items-center">
-        <Card.Root>
-          <Card.Header title={wantToLogIn ? "Entrar" : "Registrar"} />
+        <Card.Root className="w-[400px]">
+          <Card.Header className="items-center pb-10 pt-4">
+            <Heading size="xl">{wantToLogIn ? "Entrar" : "Registrar"}</Heading>
+          </Card.Header>
           <Card.Content>
             <Input.Root label="Email" className="mb-4">
               <Input.Icon>
