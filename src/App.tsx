@@ -1,14 +1,8 @@
-import { Card } from './components/Card'
-import './styles/global.css'
+import Routes from "./Routes";
+import "./styles/global.css";
 
 function App() {
-
-  return (
-    <div className="w-screen h-screen bg-Primary flex justify-center items-center">
-        <Card/>
-        
-    </div>
-  )
+  return <Routes />;
 }
 
-export default App
+export default App;
