@@ -10,7 +10,7 @@ function CardRoot({ children, className }: CardRootProps) {
   return (
     <div
       className={clsx(
-        "p-6 bg-Secundary text-gray-300 w-[400px] rounded flex flex-col",
+        "p-6 bg-Secundary text-gray-300 rounded flex flex-col",
         className
       )}
     >
@@ -22,20 +22,20 @@ function CardRoot({ children, className }: CardRootProps) {
 CardRoot.displayName = "Card.Root";
 
 export interface CardHeaderProps {
-  title: string;
+  children: ReactNode;
   className?: string;
 }
 
-function CardHeader({ title, className }: CardHeaderProps) {
+function CardHeader({ children, className }: CardHeaderProps) {
   return (
     <>
       <div
         className={clsx(
-          "font-bold text-4xl text-white flex justify-center mt-3 mb-12",
+          "font-bold flex flex-col gap-3 justify-center",
           className
         )}
       >
-        {title}
+        {children}
       </div>
     </>
   );
@@ -83,31 +83,3 @@ export const Card = {
   Content: CardContent,
   Footer: CardFooter,
 };
-
-/*
-export function LoginCard({ title, children, dontHaveAccount }: CardProps) {
-  return (
-    <>
-      <div className="p-6 bg-Secundary text-gray-300 w-[400px] rounded flex flex-col">
-        <div className="font-bold text-4xl text-white flex justify-center mt-3 mb-12">
-          {title}
-        </div>
-        <div className="flex flex-col h-2/3 justify-around">{children}</div>
-        <div className="flex gap-3 justify-between">
-          <span className="text-xs">
-            Não tem uma conta?
-            <br /> Cadastre-se{" "}
-            <span
-              className="text-blue-500 underline cursor-pointer"
-              onClick={dontHaveAccount}
-            >
-              aqui!
-            </span>
-          </span>
-          <Button className="w-36">Entrar</Button>
-        </div>
-      </div>
-    </>
-  );
-}
-*/
