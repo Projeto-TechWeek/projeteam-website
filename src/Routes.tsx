@@ -6,6 +6,7 @@ import {
 
 //#region Pages
 import { Login } from "./pages/Login";
+import { Projects } from "./pages/Projects";
 
 //#endregion
 
@@ -14,6 +15,7 @@ function Routes() {
     <Router>
       <Switch>
         <Route path="/" element={<Login />} />
+        <Route path="/index" element={<Projects />} />
       </Switch>
     </Router>
   );
