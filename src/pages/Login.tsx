@@ -16,7 +16,9 @@ export function Login() {
       <div className="w-screen h-screen bg-Primary flex justify-center items-center">
         <Card.Root className="w-[400px]">
           <Card.Header className="items-center pb-10 pt-4">
-            <Heading size="xl">{wantToLogIn ? "Entrar" : "Registrar"}</Heading>
+            <Heading size="xl" className="text-gray-100">
+              {wantToLogIn ? "Entrar" : "Registrar"}
+            </Heading>
           </Card.Header>
           <Card.Content>
             <Input.Root label="Email" className="mb-4">

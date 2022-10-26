@@ -5,7 +5,7 @@ import { Tag } from "../components/Tag";
 export function Projects() {
   return (
     <>
-      <div className="w-screen h-screen flex justify-center items-center gap-2">
+      <div className="w-screen h-screen flex justify-center items-center gap-2 bg-Primary">
         <Tag label="Arte" />
         <Tag label="Turismo" className="bg-pink-400" />
         <Tag label="Tecnologia" className="bg-cyan-400" />
