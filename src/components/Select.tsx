@@ -23,6 +23,7 @@ export function Select() {
               {dados.map((item) => {
                 return (
                   <SelectPrimitive.Item
+                    key={item}
                     value={item}
                     className="w-full flex px-4 py-2 gap-1 justify-center items-center"
                   >
