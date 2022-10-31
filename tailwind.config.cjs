@@ -9,6 +9,7 @@ module.exports = {
         blue: "#5A7CCB",
         purple: "#9583E2",
         pink: "#BE82D8",
+        modalBg: "#28243C"
       },
       fontFamily: {
         sans: "Inter, sans-serif",
