@@ -5,7 +5,7 @@ import { Slot } from "@radix-ui/react-slot";
 
 export interface InputRootProps {
   children: ReactNode;
-  label: string;
+  label?: string;
   className?: string;
 }
 

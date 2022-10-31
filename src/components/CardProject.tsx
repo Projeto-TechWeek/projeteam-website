@@ -46,7 +46,7 @@ export function CardProject() {
                 <Tag label="Banco de dados | 4" className="bg-yellow-200" />
               </Card.Content>
             </Card.Root>
-            <Button className="mt-auto bg-gradient-to-r from-[#6b92ed] via-[#9583E2] to-[#BE82D8] transition-colors ease-linear delay-75 hover:from-[#da84ff] text-gray-50">
+            <Button className="mt-auto bg-gradient-to-r from-[#6b92ed] via-[#9583E2] to-[#BE82D8] transition-colors ease-in delay-105 hover:from-[#da84ff] hover::to-[#6b92ed] text-gray-50">
               Ver mais
             </Button>
           </div>

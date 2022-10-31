@@ -11,7 +11,7 @@ export function Tag({ label, className }: TagProps) {
     <>
       <div
         className={clsx(
-          " w-fit px-2 rounded-3xl font-bold flex items-center justify-center",
+          "bg-green-400 w-fit px-2 rounded-3xl font-bold flex items-center justify-center",
           className
         )}
       >

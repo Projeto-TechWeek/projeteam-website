@@ -14,7 +14,10 @@ export function Login() {
   return (
     <>
       <div className="w-screen h-screen bg-Primary flex justify-center items-center">
-        <Card.Root className="w-[400px]">
+        <div className="h-full w-full flex p-12 absolute z-0 ">
+          <img src="logo.svg" className="opacity-5 " />
+        </div>
+        <Card.Root className="w-[400px] z-10">
           <Card.Header className="items-center pb-10 pt-4">
             <Heading size="xl" className="text-gray-100">
               {wantToLogIn ? "Entrar" : "Registrar"}
@@ -67,7 +70,7 @@ export function Login() {
                 </span>
               </span>
             )}
-            <Button className="w-36">
+            <Button className="w-36 bg-gradient-to-r from-[#6b92ed] via-[#9583E2] to-[#BE82D8] transition-colors ease-in delay-200 hover:from-[#9ebbff] hover:to-[#d07cf5] text-gray-50">
               {wantToLogIn ? "Entrar" : "Registrar"}
             </Button>
           </Card.Footer>

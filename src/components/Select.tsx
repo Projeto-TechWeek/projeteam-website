@@ -8,7 +8,7 @@ export function Select() {
       <SelectPrimitive.Root>
         <SelectPrimitive.Trigger
           aria-label="categoria"
-          className="bg-slate-400 w-fit flex items-center px-2 rounded-md"
+          className="shadow-md border-2 border-Primary w-36 flex items-center px-2 rounded-md"
         >
           <SelectPrimitive.Value placeholder="Escolha a categoria…" />
           <SelectPrimitive.Icon>
@@ -34,8 +34,6 @@ export function Select() {
                   </SelectPrimitive.Item>
                 );
               })}
-
-              <SelectPrimitive.Separator />
             </SelectPrimitive.Viewport>
             <SelectPrimitive.ScrollDownButton />
           </SelectPrimitive.Content>
