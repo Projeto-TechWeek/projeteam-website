@@ -3,8 +3,52 @@ import { Button } from "../components/Button";
 import { CardProject } from "../components/CardProject";
 import { Navbar } from "../components/Navbar";
 import { Searchbar } from "../components/Searchbar";
+import { useEffect, useState, useCallback } from "react";
+import { ListAllProjects } from "../services/projects";
+
+export interface RoleProp {
+  id: string;
+  projectId: string;
+  name: string;
+  description: string;
+  vacancies: number;
+}
+
+export interface ListProjectProp {
+  id: string;
+  title: string;
+  description: string;
+  area: string;
+  createdAt: string;
+  Role: Array<RoleProp>;
+}
 
 export function Projects() {
+  const [projects, setProjects] = useState([]);
+
+  function formatProject(project: ListProjectProp) {
+    return {
+      id: project.id,
+      title: project.title,
+      description: project.description,
+      area: project.area,
+      createdAt: new Date(project.createdAt).toLocaleDateString(),
+      Role: project.Role,
+    };
+  }
+
+  const listProjects = useCallback(() => {
+    ListAllProjects()
+      .then((response) =>
+        response.map((project: ListProjectProp) => formatProject(project))
+      )
+      .then((projectFormated) => setProjects(projectFormated));
+  }, []);
+
+  useEffect(() => {
+    listProjects();
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -17,7 +61,9 @@ export function Projects() {
           </Button>
         </div>
 
-        <CardProject />
+        {projects.map((project: ListProjectProp) => (
+          <CardProject key={project.id} project={project} />
+        ))}
       </div>
     </>
   );
